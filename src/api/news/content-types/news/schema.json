@@ -21,7 +21,7 @@
       "type": "blocks",
       "required": true
     },
-    "picture": {
+    "image": {
       "type": "media",
       "multiple": false,
       "required": true,
