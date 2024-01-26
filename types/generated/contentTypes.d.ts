@@ -418,6 +418,7 @@ export interface ApiNewsNews extends Schema.CollectionType {
       'manyToMany',
       'api::category.category'
     >;
+    article2: Attribute.RichText & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
