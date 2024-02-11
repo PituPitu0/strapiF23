@@ -17,10 +17,6 @@
       "required": true,
       "unique": true
     },
-    "article": {
-      "type": "blocks",
-      "required": true
-    },
     "image": {
       "type": "media",
       "multiple": false,
@@ -38,7 +34,7 @@
       "target": "api::category.category",
       "mappedBy": "news"
     },
-    "article2": {
+    "article": {
       "type": "richtext",
       "required": true
     }
