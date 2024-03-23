@@ -713,6 +713,36 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
   };
 }
 
+export interface ApiFormForm extends Schema.CollectionType {
+  collectionName: 'forms';
+  info: {
+    singularName: 'form';
+    pluralName: 'forms';
+    displayName: 'Form';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'imi\u0119'>;
+    phone: Attribute.BigInteger &
+      Attribute.Required &
+      Attribute.DefaultTo<'123456789'>;
+    contents: Attribute.Text &
+      Attribute.Required &
+      Attribute.DefaultTo<'tre\u015B\u0107 og\u0142oszenia'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::form.form', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::form.form', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 export interface ApiNewsNews extends Schema.CollectionType {
   collectionName: 'newss';
   info: {
@@ -760,6 +790,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
       'api::category.category': ApiCategoryCategory;
+      'api::form.form': ApiFormForm;
       'api::news.news': ApiNewsNews;
     }
   }

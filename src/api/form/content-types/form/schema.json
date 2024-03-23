@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "forms",
+  "info": {
+    "singularName": "form",
+    "pluralName": "forms",
+    "displayName": "Form"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "default": "imię",
+      "required": true
+    },
+    "phone": {
+      "type": "biginteger",
+      "default": "123456789",
+      "required": true
+    },
+    "contents": {
+      "type": "text",
+      "required": true,
+      "default": "treść ogłoszenia"
+    }
+  }
+}
