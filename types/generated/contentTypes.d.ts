@@ -719,12 +719,13 @@ export interface ApiFormForm extends Schema.CollectionType {
     singularName: 'form';
     pluralName: 'forms';
     displayName: 'Form';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    name: Attribute.String &
+    firstname: Attribute.String &
       Attribute.Required &
       Attribute.DefaultTo<'imi\u0119'>;
     phone: Attribute.BigInteger &
